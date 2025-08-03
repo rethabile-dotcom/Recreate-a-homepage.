@@ -1,0 +1,264 @@
+ <!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>American Swiss</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: 'Courier New', Courier, monospace;
+                background-color: #f9f9f9;
+                color: #111;
+                line-height: 1.6;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            header {
+                background-color: #111;
+                color: white;
+                padding: 1rem 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+                letter-spacing: 2px;
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+            }
+
+            nav a {
+                margin-left: 1.5rem;
+                color: white;
+                font-size: 0.95rem;
+                position: relative;
+            }
+
+            .dropdown {
+                position: relative;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #333;
+                min-width: 150px;
+                z-index: 1;
+                top: 100%;
+                left: 0;
+            }
+
+            .dropdown-content a {
+                color: white;
+                padding: 0.75rem 1rem;
+                display: block;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .search-bar {
+                margin-left: 2rem;
+            }
+
+            .search-bar input {
+                padding: 0.4rem 0.6rem;
+                border: none;
+                border-radius: 4px;
+            }
+
+            .hero {
+                background: url( 'https://tse4.mm.bing.net/th/id/OIP.Ii_eAuRZ841yortuMB_tTwHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3') center/cover no-repeat;
+                color: black;
+                text-align: center;
+                padding: 5rem 1rem;
+                background-size: contain;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+                margin-bottom: 0.5rem;
+                text-shadow: 2px 2px 4px rgba( 0, 0, 0, 0.6) ;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero a {
+                background-color: #c8a97e;
+                color: white;
+                padding: 0.75rem 1.5rem;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+
+            .section {
+                padding: 4rem 2rem;
+                text-align: center;
+            }
+
+            .section h3 {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .products {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 2rem;
+            }
+
+            .product {
+                background: white;
+                border-radius: 6px;
+                box-shadow: 0px 2px 8px rgba( 0, 0, 0, 0.1);
+                padding: 1rem;
+            }
+
+            .product img {
+                width: 100%;
+                height: 180px;
+                border-radius: 4px;
+                object-fit: cover;
+            
+            }
+
+            .product h4 {
+                margin-top: 0.75rem;
+                font-size: 1rem;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                max-width: 400px;
+                margin: auto;
+            }
+
+            form input, form textarea {
+                padding: 0.75rem;
+                margin-bottom: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            form button {
+                padding: 0.75rem;
+                background-color: #111;
+                color: white;
+                border: none;
+                border-radius: 4px;
+            }
+
+            footer {
+                background-color: #111;
+                color: white;
+                text-align: center;
+                padding: 2rem 1rem;
+            }
+
+            @media (max-width: 600px) {
+                header {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                nav {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                nav a {
+                    margin: 0.5rem;
+                }
+
+                .hero h2 {
+                    font-size: 2rem;
+                }
+
+                .section h3 {
+                    font-size: 1.5rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>American Swiss</h1>
+            <nav>
+                <a href="#">Home</a>
+                <div class="dropdown">
+                <a href="#">Jewellery &#9662;</a>
+                <div class="dropdown-content">
+                    <a href="#">Rings</a>
+                    <a href="#">Earrings</a>
+                    <a href="#">Necklaces</a>
+                </div>
+                </div>
+                <a href="#">Watches</a>
+                <a href="#">Contact</a>
+                <div class="search-bar">
+                    <input type="text" placeholder="search-bar">
+                </div>
+                </nav>
+        </header>
+
+        <section class="hero">
+            <h2>Luxury Redefined</h2>
+            <p>Timeless pieces for every unforgettable moment.</p>
+            <a hfref="#">Shop Now</a>
+        </section>
+
+        <section class="section">
+            <h3>New Arrivals</h3>
+            <div class="products">
+                <div class="product">
+                 <img src=" data:image/jpeg;base64,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 " alt="Bracelet">
+                 <h4>Stylish Bracelet</h4>
+                </div>
+                <div class="product">
+                    <img src="  https://tse1.mm.bing.net/th/id/OIP.EfhGQUqatj8kdCUFRXQRGgHaJ3?r=0&pid=ImgDet&w=474&h=631&rs=1&o=7&rm=3" alt="Gold Chain">
+                    <h4>Gold Chain</h4>
+                </div>
+                <div class="product">
+                    <img src="https://th.bing.com/th/id/OIP.fvy966-YvXf9EvUawkhF6QHaE8?w=290&h=193&c=7&r=0&o=7&pid=1.7&rm=3  " alt="Wedding Ring">
+                    <h4>Wedding Ring</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h3>Contact Us</h3>
+            <form>
+                <input type="text" placeholder="your name" required>
+                <input type="text" placeholder="your email" required>
+                <textarea rows="4" placeholder="your message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <footer>
+            &copy; 2025 American Swiss. All Rights Reserved.
+        </footer>
+    </body>
+ </html>
+
